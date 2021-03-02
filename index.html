@@ -4,33 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch & Sketch</title>
+    <title>Etch-A-Sketch</title>
 </head>
 <style>
 
-:root {
-  --grid-cols: 1;
-  --grid-rows: 1;
-}
-
-#container {
-  display: grid;
-  grid-gap: 1em;
-  grid-template-rows: repeat(var(--grid-rows), 1fr);
-  grid-template-columns: repeat(var(--grid-cols), 1fr);
-}
-
-.grid-item {
-  padding: 1em;
-  border: 1px solid #ddd;
+html {
   text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(142, 194, 243);
+  color:white;
+}
+
+label{
+  font-size: 20px;
+}
+
+h1{
+  font-style: italic;
+  font-size:40px;
+}
+
+.reset{
+  background-color: rgb(138, 18, 189);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  color:white;
+  width: 80px;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  display: inline-block;
+}
+
+.square {
+  background-color: white;
+  border: 1px solid hotpink;
+}
+
+.color {
+  background-color: rgb(71, 71, 71);
+  border: 1px solid hotpink;
+}
+
+.container {
+  margin-top: 25px;
+  margin-right: 40px;
+  display: inline-grid;
+  grid-template-columns: repeat(16, 2fr);
+  grid-template-rows: repeat(16, 2fr);
+  border: 5px solid hotpink;
+  border-radius: 5px;
+  height: 680px;
+  width: 680px;
 }
 </style>
 
 <body>
     
-    <div id="container">
-    </div>
+  <div class="right">
+    <div class="container"></div>
+  </div>
+  <div class="page">
+    <h1>ETCH-A-SKETCH</h1>
+    <label for="quantity">Type A Value For Grid Size:</label>
+    <input type="number" id="quantity" name="quantity" />
+    <button class="reset">RESET</button>
+  </div>
 
 
  <script src ="etch.js"></script>   
