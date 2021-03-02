@@ -6,9 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch & Sketch</title>
 </head>
+<style>
+
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+#container {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.grid-item {
+  padding: 1em;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+</style>
+
 <body>
     
-
+    <div id="container">
+    </div>
 
 
  <script src ="etch.js"></script>   
